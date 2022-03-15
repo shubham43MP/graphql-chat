@@ -1,12 +1,25 @@
 import React from "react";
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { addMessageMutation, messagesQuery } from "./graphql/queries";
+import { useQuery, useMutation, useSubscription } from "@apollo/react-hooks";
+import {
+  addMessageMutation,
+  messageAddedSubscription,
+  messagesQuery,
+} from "./graphql/queries";
 import MessageInput from "./MessageInput";
 import MessageList from "./MessageList";
 
 function Chat({ user }) {
   const { data } = useQuery(messagesQuery);
   const [addMessage] = useMutation(addMessageMutation);
+  useSubscription(messageAddedSubscription, {
+    onSubscriptionData: ({ client, subscriptionData }) => {
+      client.writeData({
+        data: {
+          messages: messages.concat(subscriptionData.data.messageAdded),
+        },
+      });
+    },
+  });
   const messages = data ? data.messages : [];
 
   const handleSend = async (text) => {
