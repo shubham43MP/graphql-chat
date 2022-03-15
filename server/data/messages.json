@@ -18,5 +18,15 @@
     "id": "HkZ3TqTbc",
     "from": "alice",
     "text": "Hello DC"
+  },
+  {
+    "id": "rk0S-i6-q",
+    "from": "alice",
+    "text": "Hello moTTO"
+  },
+  {
+    "id": "rkGqWjpZc",
+    "from": "bob",
+    "text": "New york"
   }
 ]

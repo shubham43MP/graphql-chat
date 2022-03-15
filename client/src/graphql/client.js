@@ -24,7 +24,7 @@ const httpLink = ApolloLink.from([
 ]);
 
 const wsLink = new WebSocketLink({
-  wri: wsUrl,
+  uri: wsUrl,
   options: {
     lazy: true,
     reconnect: true,
