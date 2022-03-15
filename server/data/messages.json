@@ -3,5 +3,20 @@
     "id": "SJKhIAKYB",
     "from": "system",
     "text": "Welcome!"
+  },
+  {
+    "id": "HkBlcqpWq",
+    "from": "alice",
+    "text": "Hi"
+  },
+  {
+    "id": "BJxUqqTb9",
+    "from": "bob",
+    "text": "Hello from bob"
+  },
+  {
+    "id": "HkZ3TqTbc",
+    "from": "alice",
+    "text": "Hello DC"
   }
 ]
